@@ -13,6 +13,8 @@
 		013F9661269844FD00B6CE05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 013F965F269844FD00B6CE05 /* Main.storyboard */; };
 		013F96632698450300B6CE05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 013F96622698450300B6CE05 /* Assets.xcassets */; };
 		013F96662698450300B6CE05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 013F96642698450300B6CE05 /* LaunchScreen.storyboard */; };
+		013F96722698457F00B6CE05 /* paper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 013F96712698457F00B6CE05 /* paper.pdf */; };
+		013F96752698459800B6CE05 /* paper.docx in Resources */ = {isa = PBXBuildFile; fileRef = 013F96742698459800B6CE05 /* paper.docx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		013F96622698450300B6CE05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		013F96652698450300B6CE05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		013F96672698450300B6CE05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		013F96712698457F00B6CE05 /* paper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = paper.pdf; sourceTree = "<group>"; };
+		013F96742698459800B6CE05 /* paper.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = paper.docx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				013F96622698450300B6CE05 /* Assets.xcassets */,
 				013F96642698450300B6CE05 /* LaunchScreen.storyboard */,
 				013F96672698450300B6CE05 /* Info.plist */,
+				013F96712698457F00B6CE05 /* paper.pdf */,
+				013F96742698459800B6CE05 /* paper.docx */,
 			);
 			path = "CryptoKit Demo";
 			sourceTree = "<group>";
@@ -126,6 +132,8 @@
 			files = (
 				013F96662698450300B6CE05 /* LaunchScreen.storyboard in Resources */,
 				013F96632698450300B6CE05 /* Assets.xcassets in Resources */,
+				013F96722698457F00B6CE05 /* paper.pdf in Resources */,
+				013F96752698459800B6CE05 /* paper.docx in Resources */,
 				013F9661269844FD00B6CE05 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
