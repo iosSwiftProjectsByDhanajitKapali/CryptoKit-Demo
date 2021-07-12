@@ -84,28 +84,27 @@ class ViewController: UIViewController {
         let decryptedData = try! ChaChaPoly.open(sealedBox, using: HPsymmetricKey)
 
  
-        print("from albus->  \(decryptedData)")
+        print("from harry->  \(decryptedData)")
     }
 
 
 }
 
 extension ViewController{
+    
+    ///Function to simuate public-key cryptography, Data is not encrypted. Only authenticity and integrity of data is checked here
     func publicKeyCrypto(){
-        /// Dumbledore wants to send the horcrux image to Harry.
-        /// He signs it so Harry can verify it's from him.
         //Senders Private key created
         let albusSigningPrivateKey = Curve25519.Signing.PrivateKey()
         print("The Private key is")
         print(albusSigningPrivateKey)
         
-        //Save the private key in secure location
+        //Save the private key in secure location : TO-DO
         
         //Senders Public Key Data created
         let albusSigningPublicKeyData = albusSigningPrivateKey.publicKey.rawRepresentation
         
-        /// Dumbledore publishes `albusSigningPublicKeyData`.
-        /// Dumbledore signs `data` (or `digest`) with his private key.
+        
         //Sender signs the data with private key
         let signatureForData = try! albusSigningPrivateKey.signature(for: data!)
         
@@ -115,19 +114,17 @@ extension ViewController{
         let signatureForDigest = try! albusSigningPrivateKey.signature(for: Data(digest512))
         
 
-        //Transmit Public key to Reciver
+        //Transmit Public key to Reciever, TO_DO
         
-        
-        /// Harry verifies signatures with key created from
-        /// albusSigningPublicKeyData.
         //Reciever generates the Public key from Public Key data
         let publicKey = try! Curve25519.Signing.PublicKey(rawRepresentation: albusSigningPublicKeyData)
         
-        //Cheking the
+        //Validating the authenticity of data, data is NOT encrypted
         if publicKey.isValidSignature(signatureForData, for: data!) {
           print("Dumbledore sent this data.")
             
         }
+        //Validating the intergrity of data
         if publicKey.isValidSignature(signatureForDigest, for: Data(digest512)) {
           print("Data received == data sent.")
             //UIImage(data: data!)
